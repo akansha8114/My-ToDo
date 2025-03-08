@@ -1,0 +1,18 @@
+/* src/styles/components/footer.css */
+.app-footer {
+    background-color: var(--gray-light);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .app-footer p {
+    color: var(--gray-dark);
+    font-size: 0.875rem;
+  }

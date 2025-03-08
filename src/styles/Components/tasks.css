@@ -1,0 +1,256 @@
+/* src/styles/components/tasks.css */
+/* Task Input Styles */
+.task-input-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .task-input-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .task-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .checkbox-group input {
+    width: auto;
+  }
+  
+  .form-actions {
+    margin-top: 1.5rem;
+  }
+  
+  .add-task-button {
+    background-color: var(--secondary-color);
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .add-task-button:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  /* Task List Styles */
+  .task-list-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+  }
+  
+  .task-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .task-list-header h2 {
+    margin-bottom: 0;
+    color: var(--primary-color);
+  }
+  
+  .filter-select {
+    width: auto;
+    min-width: 150px;
+  }
+  
+  .no-tasks-message {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--gray-dark);
+  }
+  
+  .tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Task Item Styles */
+  .task-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    border-left: 4px solid var(--gray-medium);
+    transition: transform 0.2s;
+  }
+  
+  .task-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .priority-high {
+    border-left-color: var(--warning-color);
+  }
+  
+  .priority-medium {
+    border-left-color: #f39c12;
+  }
+  
+  .priority-low {
+    border-left-color: var(--secondary-color);
+  }
+  
+  .task-completed {
+    opacity: 0.7;
+  }
+  
+  .task-completed .task-title {
+    text-decoration: line-through;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .task-title {
+    margin: 0;
+    font-size: 1.25rem;
+    flex: 1;
+  }
+  
+  .priority-select {
+    width: auto;
+    font-size: 0.875rem;
+    padding: 0.25rem;
+  }
+  
+  .task-description {
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+  
+  .task-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--gray-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .toggle-btn {
+    background-color: var(--primary-color);
+    flex: 1;
+  }
+  
+  .toggle-btn.completed {
+    background-color: var(--gray-dark);
+  }
+  
+  .delete-btn {
+    background-color: var(--warning-color);
+  }
+  
+  .delete-btn:hover {
+    background-color: var(--warning-dark);
+  }
+  
+  /* Weather Info Styles */
+  .weather-info {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .weather-info h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+  }
+  
+  .weather-search {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .weather-search input {
+    flex: 1;
+  }
+  
+  .weather-error {
+    color: var(--warning-color);
+    font-size: 0.875rem;
+  }
+  
+  .weather-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .weather-main h5 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .weather-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .weather-details {
+    font-size: 0.875rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .weather-details p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .tasks-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .task-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .priority-select {
+      width: 100%;
+    }
+    
+    .task-actions {
+      flex-direction: column;
+    }
+  }
