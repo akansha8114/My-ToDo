@@ -3,7 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import TaskInput from '../components/tasks/TaskInput';
 import TaskList from '../components/tasks/TaskList';
-import '../styles/pages/dashboard.css';
+import '../styles/Pages/dashboard.css';
 
 const Dashboard = () => {
   const { user } = useSelector(state => state.auth);

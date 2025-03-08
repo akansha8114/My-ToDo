@@ -1,9 +1,9 @@
 // src/components/tasks/TaskItem.js
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTask, updateTask, setTaskPriority } from '../../redux/actions/taskActions';
+import { deleteTask, updateTask, setTaskPriority } from '../../redux/Actions/taskActions';
 import WeatherInfo from '../weather/WeatherInfo';
-import '../../styles/components/tasks.css';
+import '../../styles/Components/tasks.css';
 
 const TaskItem = ({ task }) => {
   const dispatch = useDispatch();

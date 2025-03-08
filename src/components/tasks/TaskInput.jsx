@@ -1,8 +1,8 @@
 // src/components/tasks/TaskInput.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTask } from '../../redux/actions/taskActions';
-import '../../styles/components/tasks.css';
+import { addTask } from '../../redux/Actions/taskActions';
+import '../../styles/Components/tasks.css';
 
 const TaskInput = () => {
   const [task, setTask] = useState({

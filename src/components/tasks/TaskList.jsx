@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import TaskItem from './TaskItem';
-import '../../styles/components/tasks.css';
+import '../../styles/Components/tasks.css';
 
 const TaskList = () => {
   const { tasks } = useSelector(state => state.tasks);

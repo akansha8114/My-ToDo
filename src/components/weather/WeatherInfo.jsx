@@ -1,7 +1,7 @@
 // src/components/weather/WeatherInfo.js
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchWeather } from '../../redux/actions/weatherActions';
+import { fetchWeather } from '../../redux/Actions/weatherActions';
 
 const WeatherInfo = () => {
   const [location, setLocation] = useState('New York');
