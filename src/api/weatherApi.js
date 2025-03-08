@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Using OpenWeatherMap API for weather data
 // Note: In a real application, you would store the API key in an environment variable
-const API_KEY = 'your_openweathermap_api_key';
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY; // Using Vite's env variable
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // Get weather data by location name
@@ -59,10 +59,10 @@ export const getMockWeatherData = (location) => {
 
 // For development/demo, use mock data if no API key is provided
 export const getWeatherByLocationSafe = async (location) => {
-  if (API_KEY === 'your_openweathermap_api_key') {
+  if (!API_KEY || API_KEY === '80f8fd089c894c2df9586a5ded720f39') {
     console.warn('Using mock weather data. Please set a valid API key for real data.');
     return getMockWeatherData(location);
   }
-  
+
   return getWeatherByLocation(location);
 };

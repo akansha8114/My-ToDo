@@ -2,7 +2,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk'; // ✅ Correct
+import { loggerMiddleware, localStorageMiddleware } from './middleware';
+
+
 import rootReducer from './Reducers';
 
 // Configure persist options
@@ -16,7 +19,10 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
-    middleware: [thunk],
+    middleware: (getDefaultMiddleware) => 
+      getDefaultMiddleware({
+        serializableCheck: false, // Disabling warnings for non-serializable values in redux-persist
+      }).concat(thunk, loggerMiddleware, localStorageMiddleware),
     devTools: import.meta.env.MODE !== 'production',
   });
 
