@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../redux/Actions/authActions';
-import '../../styles/components/auth.css';
+import '../../styles/Components/auth.css';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
